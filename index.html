@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prince | Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(90deg, #3b82f6, #8b5cf6, #ec4899);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .active::after {
+            width: 100%;
+        }
+        
+        .hero-pattern {
+            background-image: radial-gradient(rgba(59, 130, 246, 0.2) 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+        
+        .skill-bar {
+            transition: width 1.5s ease;
+        }
+        
+        .project-card {
+            perspective: 1000px;
+        }
+        
+        .project-inner {
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+        }
+        
+        .project-card:hover .project-inner {
+            transform: rotateY(180deg);
+        }
+        
+        .project-front, .project-back {
+            backface-visibility: hidden;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .project-back {
+            transform: rotateY(180deg);
+        }
+        
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+        
+        .floating {
+            animation: float 3s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white/80 backdrop-blur-md shadow-sm z-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex-shrink-0 flex items-center">
+                    <span class="text-xl font-bold gradient-text">PK</span>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-center space-x-8">
+                        <a href="#home" class="nav-link text-gray-700 hover:text-gray-900 px-3 py-2 font-medium">Home</a>
+                        <a href="#about" class="nav-link text-gray-700 hover:text-gray-900 px-3 py-2 font-medium">About</a>
+                        <a href="#skills" class="nav-link text-gray-700 hover:text-gray-900 px-3 py-2 font-medium">Skills</a>
+                        <a href="#projects" class="nav-link text-gray-700 hover:text-gray-900 px-3 py-2 font-medium">Projects</a>
+                        <a href="#contact" class="nav-link text-gray-700 hover:text-gray-900 px-3 py-2 font-medium">Contact</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button id="menu-toggle" class="text-gray-700 hover:text-gray-900 focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Home</a>
+                <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">About</a>
+                <a href="#skills" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Skills</a>
+                <a href="#projects" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Projects</a>
+                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-pattern pt-24 pb-16 md:pt-32 md:pb-24">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center justify-between">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">Hi, I'm <span class="gradient-text">Prince Kumar</span></h1>
+                    <h2 class="text-2xl md:text-3xl text-gray-600 mb-6">Full Stack Developer</h2>
+                    <p class="text-gray-600 mb-8 max-w-lg">My passion lies in building fast, accessible, and visually engaging digital products that leave a lasting impact. Let’s turn your idea into reality
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#contact" class="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-3 rounded-full font-medium hover:shadow-lg transition-all duration-300">Get In Touch</a>
+                        <a href="#projects" class="border border-gray-300 text-gray-700 px-6 py-3 rounded-full font-medium hover:bg-gray-100 transition-all duration-300">View My Work</a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <div class="relative w-64 h-64 md:w-80 md:h-80 rounded-full bg-gradient-to-br from-blue-100 to-purple-100 flex items-center justify-center floating">
+                        <div class="absolute inset-0 rounded-full border-8 border-white/30"></div>
+                        <div class="absolute inset-4 rounded-full border-4 border-white/30"></div>
+                        <img style="border-radius: 50%; padding: 5%;" src="prince.jpeg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12 gradient-text">About Me</h2>
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/3 mb-8 md:mb-0 flex justify-center">
+                    <div class="relative w-64 h-80 rounded-lg overflow-hidden shadow-xl">
+                        <img src="prince2.jpg" alt="Working" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                        <div class="absolute bottom-0 left-0 p-4 text-white">
+                            <p class="font-medium">Prince Kumar</p>
+                            <p class="text-sm">Full Stack Developer</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-2/3 md:pl-12">
+                    <h3 class="text-2xl font-semibold mb-4">Who I Am</h3>
+                    <p class="text-gray-600 mb-4">My name is Prince Kumar, and I’m from Jehanabad. I have completed my graduation in Bachelor of Computer Applications (BCA). I have a strong interest in technology, and coding is not just my profession but also something I’m deeply passionate about. In my free time, I enjoy playing cricket, which helps me stay active and refreshed.</p>
+                    
+                    <div class="grid grid-cols-2 gap-4 mb-8">
+                        <div class="flex items-center">
+                            <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center mr-3">
+                                <i class="fas fa-map-marker-alt text-blue-500"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm text-gray-500">Location</p>
+                                <p class="font-medium">Bihar , India</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-10 h-10 rounded-full bg-purple-100 flex items-center justify-center mr-3">
+                                <i class="fas fa-briefcase text-purple-500"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm text-gray-500">Experience</p>
+                                <p class="font-medium">Fresher</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-10 h-10 rounded-full bg-pink-100 flex items-center justify-center mr-3">
+                                <i class="fas fa-graduation-cap text-pink-500"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm text-gray-500">Education</p>
+                                <p class="font-medium">BCA</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center mr-3">
+                                <i class="fas fa-envelope text-green-500"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm text-gray-500">Email</p>
+                                <p class="font-medium">theprincepratap@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="#" class="inline-flex items-center text-blue-500 font-medium hover:text-blue-700">
+                        Download Resume
+                        <i class="fas fa-download ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-16 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12 gradient-text">My Skills</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                <div class="bg-white p-6 rounded-xl shadow-md card-hover transition-all duration-300">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-lg bg-blue-100 flex items-center justify-center mr-4">
+                            <i class="fas fa-laptop-code text-blue-500 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">Frontend Development</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">I create responsive, interactive user interfaces with modern frameworks and best practices.</p>
+                    <div class="space-y-3">
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm font-medium">React.js</span>
+                                <span class="text-sm text-gray-500">95%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-blue-500 h-2 rounded-full skill-bar" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm font-medium">JavaScript</span>
+                                <span class="text-sm text-gray-500">90%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-blue-500 h-2 rounded-full skill-bar" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm font-medium">HTML/CSS</span>
+                                <span class="text-sm text-gray-500">98%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-blue-500 h-2 rounded-full skill-bar" style="width: 98%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl shadow-md card-hover transition-all duration-300">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-lg bg-purple-100 flex items-center justify-center mr-4">
+                            <i class="fas fa-server text-purple-500 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">Backend Development</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">I build scalable, secure backend systems with modern technologies and architectures.</p>
+                    <div class="space-y-3">
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm font-medium">Node.js</span>
+                                <span class="text-sm text-gray-500">90%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-purple-500 h-2 rounded-full skill-bar" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm font-medium">Express</span>
+                                <span class="text-sm text-gray-500">88%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-purple-500 h-2 rounded-full skill-bar" style="width: 88%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm font-medium">MongoDB</span>
+                                <span class="text-sm text-gray-500">85%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-purple-500 h-2 rounded-full skill-bar" style="width: 85%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                <div class="bg-white p-4 rounded-lg shadow-sm flex flex-col items-center hover:shadow-md transition-all duration-300">
+                    <div class="w-12 h-12 mb-2 flex items-center justify-center">
+                        <i class="fab fa-react text-blue-500 text-3xl"></i>
+                    </div>
+                    <span class="text-sm font-medium">React</span>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-sm flex flex-col items-center hover:shadow-md transition-all duration-300">
+                    <div class="w-12 h-12 mb-2 flex items-center justify-center">
+                        <i class="fab fa-js text-yellow-500 text-3xl"></i>
+                    </div>
+                    <span class="text-sm font-medium">JavaScript</span>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-sm flex flex-col items-center hover:shadow-md transition-all duration-300">
+                    <div class="w-12 h-12 mb-2 flex items-center justify-center">
+                        <i class="fab fa-node-js text-green-500 text-3xl"></i>
+                    </div>
+                    <span class="text-sm font-medium">Node.js</span>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-sm flex flex-col items-center hover:shadow-md transition-all duration-300">
+                    <div class="w-12 h-12 mb-2 flex items-center justify-center">
+                        <i class="fab fa-css3-alt text-blue-400 text-3xl"></i>
+                    </div>
+                    <span class="text-sm font-medium">CSS3</span>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-sm flex flex-col items-center hover:shadow-md transition-all duration-300">
+                    <div class="w-12 h-12 mb-2 flex items-center justify-center">
+                        <i class="fab fa-html5 text-orange-500 text-3xl"></i>
+                    </div>
+                    <span class="text-sm font-medium">HTML5</span>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-sm flex flex-col items-center hover:shadow-md transition-all duration-300">
+                    <div class="w-12 h-12 mb-2 flex items-center justify-center">
+                        <i class="fab fa-git-alt text-red-500 text-3xl"></i>
+                    </div>
+                    <span class="text-sm font-medium">Git</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12 gradient-text">My Projects</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="project-card h-80 rounded-xl overflow-hidden shadow-md">
+                    <div class="project-inner relative w-full h-full">
+                        <div class="project-front bg-gray-50 p-6">
+                            <div class="w-14 h-14 rounded-lg bg-blue-100 flex items-center justify-center mb-4">
+                                <i class="fas fa-shopping-cart text-blue-500 text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold mb-2">E-Commerce Platform</h3>
+                            <p class="text-gray-600 text-sm">A full-featured online store with payment integration and admin dashboard.</p>
+                            <div class="absolute bottom-6 left-6">
+                                <span class="text-xs font-medium px-2 py-1 bg-blue-100 text-blue-600 rounded-full">React</span>
+                                <span class="text-xs font-medium px-2 py-1 bg-purple-100 text-purple-600 rounded-full">Node.js</span>
+                            </div>
+                        </div>
+                        <div class="project-back bg-gradient-to-br from-blue-500 to-purple-600 p-6 text-white">
+                            <h3 class="text-xl font-semibold mb-2">E-Commerce Platform</h3>
+                            <p class="text-sm mb-4">Built with React for the frontend and Node.js for the backend. Features include product catalog, cart system, Stripe payment integration, and admin dashboard.</p>
+                            <div class="absolute bottom-6 left-6 right-6">
+                                <a href="#" class="text-sm font-medium inline-flex items-center">
+                                    View Project
+                                    <i class="fas fa-arrow-right ml-1"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="project-card h-80 rounded-xl overflow-hidden shadow-md">
+                    <div class="project-inner relative w-full h-full">
+                        <div class="project-front bg-gray-50 p-6">
+                            <div class="w-14 h-14 rounded-lg bg-green-100 flex items-center justify-center mb-4">
+                                <i class="fas fa-tasks text-green-500 text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold mb-2">Task Management App</h3>
+                            <p class="text-gray-600 text-sm">A collaborative task management tool with real-time updates.</p>
+                            <div class="absolute bottom-6 left-6">
+                                <span class="text-xs font-medium px-2 py-1 bg-blue-100 text-blue-600 rounded-full">React</span>
+                                <span class="text-xs font-medium px-2 py-1 bg-green-100 text-green-600 rounded-full">Firebase</span>
+                            </div>
+                        </div>
+                        <div class="project-back bg-gradient-to-br from-green-500 to-blue-600 p-6 text-white">
+                            <h3 class="text-xl font-semibold mb-2">Task Management App</h3>
+                            <p class="text-sm mb-4">A real-time collaborative task management application built with React and Firebase. Features include drag-and-drop interface, team collaboration, and deadline tracking.</p>
+                            <div class="absolute bottom-6 left-6 right-6">
+                                <a href="#" class="text-sm font-medium inline-flex items-center">
+                                    View Project
+                                    <i class="fas fa-arrow-right ml-1"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="project-card h-80 rounded-xl overflow-hidden shadow-md">
+                    <div class="project-inner relative w-full h-full">
+                        <div class="project-front bg-gray-50 p-6">
+                            <div class="w-14 h-14 rounded-lg bg-pink-100 flex items-center justify-center mb-4">
+                                <i class="fas fa-film text-pink-500 text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold mb-2">Movie Discovery App</h3>
+                            <p class="text-gray-600 text-sm">Browse and discover movies with personalized recommendations.</p>
+                            <div class="absolute bottom-6 left-6">
+                                <span class="text-xs font-medium px-2 py-1 bg-blue-100 text-blue-600 rounded-full">React</span>
+                                <span class="text-xs font-medium px-2 py-1 bg-yellow-100 text-yellow-600 rounded-full">API</span>
+                            </div>
+                        </div>
+                        <div class="project-back bg-gradient-to-br from-pink-500 to-red-500 p-6 text-white">
+                            <h3 class="text-xl font-semibold mb-2">Movie Discovery App</h3>
+                            <p class="text-sm mb-4">A movie discovery platform that uses the TMDB API to display trending, popular, and upcoming movies. Features include search, filtering, and watchlist functionality.</p>
+                            <div class="absolute bottom-6 left-6 right-6">
+                                <a href="#" class="text-sm font-medium inline-flex items-center">
+                                    View Project
+                                    <i class="fas fa-arrow-right ml-1"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#" class="inline-flex items-center px-6 py-3 border border-gray-300 text-gray-700 rounded-full font-medium hover:bg-gray-50 transition-all duration-300">
+                    View All Projects
+                    <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12 gradient-text">Get In Touch</h2>
+            
+            <div class="flex flex-col md:flex-row">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+                    <h3 class="text-xl font-semibold mb-4">Let's talk about your project</h3>
+                    <p class="text-gray-600 mb-6">I'm currently available for freelance work or full-time positions. If you have a project that you want to get started, think you need my help with something, or just want to say hi, then get in touch.</p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center mr-4">
+                                <i class="fas fa-envelope text-blue-500"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm text-gray-500">Email me at</p>
+                                <p class="font-medium">theprincepratap@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-10 h-10 rounded-full bg-purple-100 flex items-center justify-center mr-4">
+                                <i class="fas fa-phone-alt text-purple-500"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm text-gray-500">Whats'up at</p>
+                                <p class="font-medium">+91 6299405956</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-10 h-10 rounded-full bg-pink-100 flex items-center justify-center mr-4">
+                                <i class="fas fa-map-marker-alt text-pink-500"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm text-gray-500">Find me at</p>
+                                <p class="font-medium">Jehanabad , Bihar , India</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <h4 class="text-lg font-medium mb-4">Follow me</h4>
+                        <div class="flex space-x-4">
+                            <a href="https://linkedin.com/in/theprincepratap" class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center text-gray-700 hover:bg-blue-500 hover:text-white transition-all duration-300">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="https://www.youtube.com/channel/UCJnw4uCsR9cs38cPVZSVcsA" class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center text-gray-700 hover:bg-blue-400 hover:text-white transition-all duration-300">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                            <a href="https://github.com/theprincepratap" class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center text-gray-700 hover:bg-gray-800 hover:text-white transition-all duration-300">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://www.instagram.com/itsprincepratap" class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center text-gray-700 hover:bg-pink-500 hover:text-white transition-all duration-300">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2">
+                    <form class="bg-white p-6 rounded-xl shadow-md">
+                        <div class="mb-4">
+                            <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Name</label>
+                            <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all duration-300" placeholder="Your name">
+                        </div>
+                        <div class="mb-4">
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                            <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all duration-300" placeholder="Your email">
+                        </div>
+                        <div class="mb-4">
+                            <label for="subject" class="block text-sm font-medium text-gray-700 mb-1">Subject</label>
+                            <input type="text" id="subject" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all duration-300" placeholder="Subject">
+                        </div>
+                        <div class="mb-4">
+                            <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all duration-300" placeholder="Your message"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-3 rounded-lg font-medium hover:shadow-lg transition-all duration-300">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <span class="text-xl font-bold gradient-text">AC</span>
+                    <p class="text-gray-400 mt-2">© 2025 theprincepratap. All rights reserved.</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // Close mobile menu if open
+                document.getElementById('mobile-menu').classList.add('hidden');
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Highlight active navigation link on scroll
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.nav-link');
+        
+        window.addEventListener('scroll', () => {
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                
+                if (pageYOffset >= (sectionTop - 100)) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // Animate skill bars when they come into view
+        const skillBars = document.querySelectorAll('.skill-bar');
+        
+        const animateSkillBars = () => {
+            skillBars.forEach(bar => {
+                const width = bar.style.width;
+                bar.style.width = '0';
+                
+                setTimeout(() => {
+                    bar.style.width = width;
+                }, 100);
+            });
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateSkillBars();
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        document.querySelector('#skills').addEventListener('mouseenter', animateSkillBars);
+        
+        const skillsSection = document.querySelector('#skills');
+        observer.observe(skillsSection);
+    </script>
+</body>
+</html>
