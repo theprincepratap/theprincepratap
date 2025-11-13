@@ -1,5 +1,5 @@
 # 💫 About Me:
-👋 Hi there, I’m Prince!<br>I’m a passionate Full Stack Web Developer currently pursuing my Master of Computer Applications (MCA). I specialize in building dynamic and responsive web applications using technologies like HTML, CSS, JavaScript, React, Python and SQl. My journey in web development is driven by a commitment to continuous learning and creating impactful digital solutions.
+👋 Hi there, I’m Prince!<br> currently pursuing my Master of Computer Applications (MCA) From VIT Chennai .
 
 
 ## 🌐 Socials:
