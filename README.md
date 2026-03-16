@@ -1,4 +1,4 @@
-<h1 align="center">Hello<img src="Hi.gif" width="30px" height="30px"> I'm Prince Kumar </h1>
+<h1 align="center">Hii 👋 I'm Prince Kumar </h1>
 A MCA student passionate about Artificial Intelligence and intelligent systems. I build Machine Learning and AI-powered applications while also working with modern web technologies like React, Django, and JavaScript. Currently exploring Deep Learning and advanced AI systems, I enjoy creating practical projects and continuously learning new technologies. 🚀
 <div align="center">
 <img src ="./Banner.jpg" />
