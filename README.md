@@ -1,4 +1,4 @@
-# 💫 About Me:
+                                                            # Hii 👋 I am Prince Kumar 
 A MCA student passionate about Artificial Intelligence and intelligent systems. I build Machine Learning and AI-powered applications while also working with modern web technologies like React, Django, and JavaScript. Currently exploring Deep Learning and advanced AI systems, I enjoy creating practical projects and continuously learning new technologies. 🚀
 
 
