@@ -1,7 +1,7 @@
 <img src="https://raw.githubusercontent.com/theprincepratap/theprincepratap/refs/heads/main/banner.png" width="100%"/>
 
 <div align="center">
-<img src="https://capsule-render.vercel.app/api?type=waving&height=220&color=0:dc2626,50:eab308,100:22c55e&text=Hi,%20I'm%20Prince%20Pratap Singh&fontAlign=50&fontAlignY=38&fontColor=ffffff&fontSize=46&desc=Full%20Stack%20%7C%20Python%20Backend%20%7C%20GenAI%20Developer&descAlign=50&descAlignY=58&descSize=18" alt="Prince profile hero" width="100%" />
+<img src="https://capsule-render.vercel.app/api?type=waving&height=220&color=0:dc2626,50:eab308,100:22c55e&text=Hi,%20I'm%20Prince%20Pratap%20Singh&fontAlign=50&fontAlignY=38&fontColor=ffffff&fontSize=46&desc=AI%20ENGINEER%20%7C%7C%20CONTENT%20CREATOR&descAlign=50&descAlignY=58&descSize=18" alt="Prince Pratap Singh profile hero" width="100%" />
 
 
 <br/>
