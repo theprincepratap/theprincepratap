@@ -128,6 +128,13 @@ me.say_hi()
 <img src="https://github-profile-trophy-fork-two.vercel.app/?username=theprincepratap&theme=tokyonight&no-frame=true&margin-w=10&row=1" alt="GitHub Trophies" width="90%"/>
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
 <img src="https://github-readme-activity-graph.vercel.app/graph?username=theprincepratap&bg_color=1a1b27&color=00FFD2&line=00FFD2&point=FF6B6B&area=true&hide_border=true&area_color=00FFD230" width="100%"/>
+<br/>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/theprincepratap/theprincepratap/output/github-contribution-grid-snake-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/theprincepratap/theprincepratap/output/github-contribution-grid-snake.svg" />
+  <img alt="github contribution grid snake animation" src="https://raw.githubusercontent.com/theprincepratap/theprincepratap/output/github-contribution-grid-snake.svg" />
+</picture>
+
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
 </div>
 
