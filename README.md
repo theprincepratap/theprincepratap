@@ -4,7 +4,6 @@
 
 ### [AI ENGINEER | CONTENT CREATOR]
 
-**[THEPRINCEPRATAP.DEV]**
 
 <br/>
 
@@ -26,7 +25,7 @@
 
 <br/><br/>
 
-<img src="./output1.gif" width="500" alt="Animated banner"/>
+<img src="./output01.gif" width="500" alt="Animated banner"/>
 
 </div>
 
