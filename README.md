@@ -131,7 +131,7 @@ me.say_hi()
 
 <br/><br/>
 
-<img src="https://github-profile-trophy.vercel.app/?username=[theprincepratap]&theme=tokyonight&no-frame=true&margin-w=10&row=1" alt="GitHub Trophies" width="90%"/>
+[<img src="https://github-profile-trophy.vercel.app/?username=[theprincepratap]&theme=tokyonight&no-frame=true&margin-w=10&row=1" alt="GitHub Trophies" width="90%"/>](https://github-profile-trophy.vercel.app/?username=theprincepratap&theme=tokyonight&no-frame=true&margin-w=10&row=1)
 
 </div>
 
