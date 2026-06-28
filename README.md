@@ -26,7 +26,7 @@
 
 <br/><br/>
 
-<img src="./output.gif" width="500" alt="Animated banner"/>
+<img src="./output1.gif" width="500" alt="Animated banner"/>
 
 </div>
 
@@ -122,16 +122,16 @@ me.say_hi()
 
 <div align="center">
 
-<img src="https://github-readme-stats.vercel.app/api?username=[YOUR_GITHUB]&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" alt="GitHub Stats" width="48%"/>
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=[YOUR_GITHUB]&layout=compact&theme=tokyonight&hide_border=true" alt="Top Languages" width="38%"/>
+<img src="https://github-readme-stats.vercel.app/api?username=[theprincepratap]&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" alt="GitHub Stats" width="48%"/>
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=[theprincepratap]&layout=compact&theme=tokyonight&hide_border=true" alt="Top Languages" width="38%"/>
 
 <br/>
 
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=[YOUR_GITHUB]&theme=tokyonight&hide_border=true" alt="GitHub Streak" width="70%"/>
+<img src="https://github-readme-streak-stats.herokuapp.com/?user=[theprincepratap]&theme=tokyonight&hide_border=true" alt="GitHub Streak" width="70%"/>
 
 <br/><br/>
 
-<img src="https://github-profile-trophy.vercel.app/?username=[YOUR_GITHUB]&theme=tokyonight&no-frame=true&margin-w=10&row=1" alt="GitHub Trophies" width="90%"/>
+<img src="https://github-profile-trophy.vercel.app/?username=[theprincepratap]&theme=tokyonight&no-frame=true&margin-w=10&row=1" alt="GitHub Trophies" width="90%"/>
 
 </div>
 
