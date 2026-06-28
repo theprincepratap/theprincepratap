@@ -1,4 +1,4 @@
-<img src="https://capsule-render.vercel.app/api?type=shark&height=300&color=0:dc2626,20:f97316,40:eab308,60:22c55e,80:0ea5e9,100:8b5cf6&text=Prince%20Pratap%20Singh&textBg=false&fontAlign=50&fontAlignY=38&fontColor=ffffff&fontSize=46&desc=AI%20ENGINEER%20%7C%7C%20CONTENT%20CREATOR&descAlign=50&descAlignY=58&descSize=18" alt="Prince Pratap Singh profile hero" width="100%" />
+<img src="https://capsule-render.vercel.app/api?type=shark&height=180&color=random&text=Prince%20Pratap%20Singh&textBg=false&fontAlign=50&fontAlignY=38&fontColor=ffffff&fontSize=46&desc=AI%20ENGINEER%20%7C%7C%20CONTENT%20CREATOR&descAlign=50&descAlignY=58&descSize=18" alt="Prince Pratap Singh profile hero" width="100%" />
 <img src="https://raw.githubusercontent.com/theprincepratap/theprincepratap/refs/heads/main/banner.png" width="100%"/>
 
 <div align="center">
