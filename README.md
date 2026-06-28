@@ -1,8 +1,8 @@
 <div align="center">
 
-# Hi, I'm [PRINCE KUMAR] 👋
+# Hi, I'm PRINCE KUMAR 👋
 
-### [AI ENGINEER | CONTENT CREATOR]
+### AI ENGINEER | CONTENT CREATOR
 
 
 <br/>
