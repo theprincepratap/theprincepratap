@@ -134,14 +134,14 @@ me.say_hi()
 
 <img src="https://github-profile-trophy-fork-two.vercel.app/?username=theprincepratap&theme=tokyonight&no-frame=true&margin-w=10&row=1" alt="GitHub Trophies" width="90%"/>
 
-
-
+<br/>
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=theprincepratap&bg_color=1a1b27&color=00FFD2&line=00FFD2&point=FF6B6B&area=true&hide_border=true&area_color=00FFD230" width="100%"/>
 </div>
 
 <br/>
 
 <div align="center">
-
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
 ### 💌 Let's Connect
 
 I'm always open to interesting conversations, collaborations, and opportunities. Reach out via any of the links above — I'd love to hear from you.
