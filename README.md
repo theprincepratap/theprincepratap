@@ -1,10 +1,7 @@
 <img src="https://raw.githubusercontent.com/theprincepratap/theprincepratap/refs/heads/main/banner.png" width="100%"/>
 
 <div align="center">
-
-# Hi, I'm PRINCE KUMAR 👋
-
-### AI ENGINEER | CONTENT CREATOR
+<img src="https://capsule-render.vercel.app/api?type=waving&height=220&color=0:dc2626,50:eab308,100:22c55e&text=Hi,%20I'm%20Arvind%20Singh&fontAlign=50&fontAlignY=38&fontColor=ffffff&fontSize=46&desc=Full%20Stack%20%7C%20Python%20Backend%20%7C%20GenAI%20Developer&descAlign=50&descAlignY=58&descSize=18" alt="Arvind Singh profile hero" width="100%" />
 
 
 <br/>
