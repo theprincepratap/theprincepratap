@@ -1,3 +1,5 @@
+<img src="https://raw.githubusercontent.com/theprincepratap/theprincepratap/refs/heads/main/banner.png" width="100%"/>
+
 <div align="center">
 
 # Hi, I'm PRINCE KUMAR 👋
