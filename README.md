@@ -143,6 +143,6 @@ me.say_hi()
 
 I'm always open to interesting conversations, collaborations, and opportunities. Reach out via any of the links above — I'd love to hear from you.
 
-<img src="https://komarev.com/ghpvc/?username=[YOUR_GITHUB]&style=for-the-badge&color=blueviolet" alt="Profile Views"/>
+<img src="https://komarev.com/ghpvc/?username=[theprincepratap]&style=for-the-badge&color=blueviolet" alt="Profile Views"/>
 
 </div>
