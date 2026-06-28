@@ -1,11 +1,7 @@
+<img src="https://capsule-render.vercel.app/api?type=shark&height=300&color=gradient&customColorList=0,2,4,6,8,10&text=Prince%20Pratap%20Singh&textBg=false&fontAlign=50&fontAlignY=38&fontColor=ffffff&fontSize=46&desc=AI%20ENGINEER%20%7C%7C%20CONTENT%20CREATOR&descAlign=50&descAlignY=58&descSize=18" alt="Prince Pratap Singh profile hero" width="100%" />
 <img src="https://raw.githubusercontent.com/theprincepratap/theprincepratap/refs/heads/main/banner.png" width="100%"/>
 
 <div align="center">
-<img src="https://capsule-render.vercel.app/api?type=waving&height=220&color=0:dc2626,50:eab308,100:22c55e&text=Hi,%20I'm%20Prince%20Pratap%20Singh&fontAlign=50&fontAlignY=38&fontColor=ffffff&fontSize=46&desc=AI%20ENGINEER%20%7C%7C%20CONTENT%20CREATOR&descAlign=50&descAlignY=58&descSize=18" alt="Prince Pratap Singh profile hero" width="100%" />
-
-
-<br/>
-
 <a href="https://github.com/[theprincepratap]" target="_blank">
   <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/>
 </a>
